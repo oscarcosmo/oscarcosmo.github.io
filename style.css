@@ -22,15 +22,21 @@ a {
     left: 50%;
     transform: rotate(50deg) translateX(min(45vw, 450px)) rotate(-50deg);
 }
-a:last-child {
+a:nth-child(2) {
     transform: rotate(40deg) translateX(min(45vw, 450px)) rotate(-40deg); 
+}
+a:last-child {
+    transform: rotate(30deg) translateX(min(45vw, 450px)) rotate(-30deg); 
 }
 @media only screen and (max-width: 910px) {
     a {
         transform: rotate(65deg) translateX(min(45vw, 450px)) rotate(-65deg); 
     }
-    a:last-child {
+    a:nth-child(2) {
         transform: rotate(50deg) translateX(min(45vw, 450px)) rotate(-50deg); 
+    }
+    a:last-child {
+        transform: rotate(35deg) translateX(min(45vw, 450px)) rotate(-35deg); 
     }
 }
 @media only screen and (max-width: 625px) {
@@ -41,7 +47,7 @@ a:last-child {
         left: auto;
         margin-top: 10px;
     }
-    a:last-child {
+    a:last-child, a:nth-child(2) {
         transform: none;
     }
 }
