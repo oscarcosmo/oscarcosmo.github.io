@@ -20,26 +20,20 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotate(50deg) translateX(min(45vw, 450px)) rotate(-50deg);
 }
-a:nth-child(2) {
-    transform: rotate(40deg) translateX(min(45vw, 450px)) rotate(-40deg); 
+
+svg {
+    width: 70px;
+    height: 70px;
 }
-a:last-child {
-    transform: rotate(30deg) translateX(min(45vw, 450px)) rotate(-30deg); 
+img {
+    width: min(90vw, 45vh);
+    max-width: 900px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-@media only screen and (max-width: 910px) {
-    a {
-        transform: rotate(65deg) translateX(min(45vw, 450px)) rotate(-65deg); 
-    }
-    a:nth-child(2) {
-        transform: rotate(50deg) translateX(min(45vw, 450px)) rotate(-50deg); 
-    }
-    a:last-child {
-        transform: rotate(35deg) translateX(min(45vw, 450px)) rotate(-35deg); 
-    }
-}
-@media only screen and (max-width: 625px) {
+
+@media screen and (orientation: portrait) { 
     a {
         transform: none;
         position: relative;
@@ -50,14 +44,22 @@ a:last-child {
     a:last-child, a:nth-child(2) {
         transform: none;
     }
+
+    svg {
+        width: max(15vw, 70px);
+        height: auto;
+    }
 }
-svg {
-    width: 70px;
-    height: 70px;
-}
-img {
-    width: 90vw;
-    max-width: 900px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
+
+@media screen and (orientation: landscape) and (min-height: 950px) {
+    a {
+        transform: rotate(62deg) translateX(min(22vh, 450px)) rotate(-62deg);    
+        /* transform: rotate(50deg) translateX(45vh) rotate(-50deg);     */
+    }
+    a:nth-child(2) {
+        transform: rotate(40deg) translateX(min(22vh, 450px)) rotate(-40deg); 
+    }
+    a:last-child {
+        transform: rotate(17deg) translateX(min(22vh, 450px)) rotate(-17deg); 
+    }
+ }
